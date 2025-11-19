@@ -25,5 +25,9 @@ app.use('/api', require('./routes/UserRoutes'));
 app.use('/api', require('./routes/EventRoutes'));
 app.use('/api', require('./routes/BookingRoutes'));
 
+app.get("/", (req, res) => {
+  res.send("Server is running on Render!");
+});
+
 // Start the server
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
